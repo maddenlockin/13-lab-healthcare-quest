@@ -1,8 +1,20 @@
-// import functions and grab DOM elements
+const form = document.querySelector('#user-form');
 
-// initialize state
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // above stops the query parameters and stops the refresh
+    const formData = new FormData(form);
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+    const user = formData.get('username');
+    const userClass = formData.get('class');
+    console.log(user, userClass);
+});
+// const userObject = {
+//     name: user,
+//     class: userClass,
+//     completed: {},
+//     health: 35,
+//     cash: 0,
+// };
+//setUser(userObject);
+window.location = '../list';
