@@ -10,8 +10,7 @@ main {
 }
 
 
-.ape {
-    font-size: 10em;
-    position: relative;
-    margin: auto;
+p {
+    margin: 0;
+    
 }

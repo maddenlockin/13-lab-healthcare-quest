@@ -8,18 +8,18 @@ form.addEventListener('submit', (e) => {
 
     const user = formData.get('username');
     const userClass = formData.get('class');
-    console.log(user, userClass);
+    //console.log(user, userClass);
 
     const userObject = {
     name: user,
     class: userClass,
     completed: {},
-    health: 35,
-    cash: 0,
+    health: 100,
+    cash: 1000,
     };
     setUser(userObject);
 
-    window.location = '../list';
+    window.location = './list';
 
 });
 

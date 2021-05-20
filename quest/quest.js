@@ -1,18 +1,21 @@
 import quests from '../data/data.js';
 import { findById } from '../utils.js';
+import { changeCash, changeHealth, completeQuest } from '../local-storage-utils.js';
+import { renderStats } from '../render-stats.js';
+
+renderStats();
 
 const main = document.querySelector('.main-section');
-
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
-//console.log(id);
 const quest = findByIt(quests, id);
-//console.log(quest);
+//console.log(id, quest);
 
 //create h1, img, and p
 const h1 = document.createElement('h1'); 
 const img = document.createElement('img');
 const p = document.createElement('p');
+
 h1.textContent = quest.title;
 img.src = `../assests/${quest.image}`;
 p.textContent = quest.description;
@@ -40,14 +43,18 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
+
     const choiceId = formData.get('choice')
     //console.log(choiceId);
 
     const selectedChoice = findById(quest.choices, choiceId);
-    changeGold(selectedChoice.gold);
-    changeHP(selectedChoice.hp);   
-    setTimeout(() => {window.location('../list')} , 5000);
+
+    changeCash(selectedChoice.cash);
+    changeHealth(selectedChoice.health); 
+    completeQuest(quest.id);  
+    //setTimeout(() => window.location = '../list', 5000);
 })
+
 main.append(h1, img, p, form);
 
 // const completed = {
