@@ -1,3 +1,4 @@
+import { setUser } from './local-storage-utils.js';
 const form = document.querySelector('#user-form');
 
 form.addEventListener('submit', (e) => {
@@ -8,13 +9,17 @@ form.addEventListener('submit', (e) => {
     const user = formData.get('username');
     const userClass = formData.get('class');
     console.log(user, userClass);
+
+    const userObject = {
+    name: user,
+    class: userClass,
+    completed: {},
+    health: 35,
+    cash: 0,
+    };
+    setUser(userObject);
+
+    window.location = '../list';
+
 });
-// const userObject = {
-//     name: user,
-//     class: userClass,
-//     completed: {},
-//     health: 35,
-//     cash: 0,
-// };
-//setUser(userObject);
-window.location = '../list';
+

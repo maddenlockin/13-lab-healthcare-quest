@@ -1,4 +1,4 @@
-import quests from '../data/app.js';
+import quests from '../data/data.js';
 import { findById } from '../utils.js';
 
 const main = document.querySelector('.main-section');
@@ -50,7 +50,7 @@ form.addEventListener('submit', (e) => {
 })
 main.append(h1, img, p, form);
 
-const completed = {
-    dragon: true,
-    treasure: true
-};
+// const completed = {
+//     dragon: true,
+//     treasure: true
+// };

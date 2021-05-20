@@ -1,12 +1,15 @@
+
+const USER = ('USER')
 export function getUser(){
-    const user = localStorage.getItem(USER);
+    const stringUser = localStorage.getItem(USER);
+
     if (!stringUser) return {};
     //above says to return the object
     const user = JSON.parse(stringUser);
     return user;
 };
 
-export function saveUser(user){
+export function setUser(user){
     const stringUser = JSON.stringify(user);
     localStorage.setItem(USER, stringUser);
 };
