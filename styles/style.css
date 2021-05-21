@@ -1,16 +1,45 @@
 body {
     font-family: 'Sora', sans-serif;
     
+    
 }
 
 main {
     position: relative;
     height: 100vh;
-    display: grid;    
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+
 }
 
 
 p {
     margin: 0;
     
+}
+
+button {
+    background-color: #fada9f;
+    border-radius: 50%;
+    width:67px;
+    height: 67px;
+    border: 1px solid #fada9f;
+    padding: 5px;
+    font-variant: small-caps;
+}
+form {
+    width: 350px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    
+    
+}
+label {
+    margin:10px;
+}
+.name {
+    margin: 30px;
+    width: 
 }

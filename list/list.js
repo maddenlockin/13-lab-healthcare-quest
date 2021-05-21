@@ -2,7 +2,9 @@ import quests from '../data/data.js';
 import { userCompletedAllQuests, userDied, getUser } from '../local-storage-utils.js';
 import { renderStats } from '../render-stats.js';
 
-renderStats();
+const user = getUser();
+
+renderStats(user);
 
 if (userCompletedAllQuests() || userDied()) {
     //take them to the results page
@@ -11,17 +13,17 @@ if (userCompletedAllQuests() || userDied()) {
 
 const ul = document.querySelector('#quests');
 
-const li = document.createElement('li');
 
-for (let quest in quests){
-    const user = getUser();
+
+for (let quest of quests) {
     const questIsCompleted = user.completed[quest.id];;
+
+    const li = document.createElement('li');
 
     if (!questIsCompleted) {
         const a = document.createElement('a');
 
         a.href = `../quest/?id=${quest.id}`;
-
         a.textContent = quest.title;
 
         li.append(a);
@@ -30,10 +32,9 @@ for (let quest in quests){
         const span = document.createElement('span');
 
         span.style.textDecoration = "line-through";
-
         span.textContent = quest.title;
 
         li.append(span);
     }
-ul.append(li);
+    ul.append(li);
 }

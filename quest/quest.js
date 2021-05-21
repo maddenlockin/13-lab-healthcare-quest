@@ -8,7 +8,7 @@ renderStats();
 const main = document.querySelector('.main-section');
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
-const quest = findByIt(quests, id);
+const quest = findById(quests, id);
 //console.log(id, quest);
 
 //create h1, img, and p
@@ -17,7 +17,7 @@ const img = document.createElement('img');
 const p = document.createElement('p');
 
 h1.textContent = quest.title;
-img.src = `../assests/${quest.image}`;
+img.src = `../assets/${quest.image}`;
 p.textContent = quest.description;
 
 const form = document.createElement('form');
@@ -35,7 +35,7 @@ for (let choice of quest.choices) {
 
 const button = document.createElement('button');
 
-button.textContent = 'Button';
+button.textContent = 'Result...';
 
 form.append(button);
 
@@ -52,6 +52,18 @@ form.addEventListener('submit', (e) => {
     changeCash(selectedChoice.cash);
     changeHealth(selectedChoice.health); 
     completeQuest(quest.id);  
+
+    const resultsDiv = document.createElement('div');
+    resultsDiv.textContent = selectedChoice.result;
+
+    const returnButton = document.createElement('button');
+    returnButton.textContent = 'Back to Quests';
+    returnButton.addEventListener('click', () => {
+        window.location = '../list';
+    });
+
+    resultsDiv.append(returnButton);
+    main.append(resultsDiv);
     //setTimeout(() => window.location = '../list', 5000);
 })
 
