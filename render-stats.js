@@ -3,7 +3,7 @@ import { getUser } from "./local-storage-utils.js";
 export function renderStats(){
     const user = getUser();
 
-    const header = document.createElement('header');
+    const header = document.querySelector('header');
     const div = document.createElement('div');
     const nameP = document.createElement('p');
     const healthP = document.createElement('p');
@@ -15,4 +15,5 @@ export function renderStats(){
     
     div.append(nameP, healthP, cashP);
     header.append(div);
+    console.log('stats', renderStats)
 }

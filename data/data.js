@@ -4,7 +4,7 @@ const heart = {
     map: {
 
     },
-    image:'',
+    image:'../assets/heart.png',
     description: 'Your Primary Care Provider (PCP) diagnoses you with heart disease. The specialist you are referred to is out-of-network. What do you do?',
     choices: [{
         id: 'lifestyle',
@@ -34,7 +34,7 @@ const bill = {
 
     },
     prerequisites: ['heart'],
-    image:'',
+    image:'../assets/bill.png',
     description: 'The Urgent Care a couple blocks away took your insurance when you went there 6 months ago, but at the end of your appointment today the receptionist informs you that they no longer take your insurance and hands you a bill for $160. What do you do?',
     choices: [{
         id: 'argue',
@@ -64,7 +64,7 @@ const referral = {
 
     },
     prerequisites:['heart', 'bill'],
-    image:'',
+    image:'../assets/choice.png',
     description: 'You are seeking out an endocrinologist. Your friend tells you about the doctor they are seeing and how great they are! Through your PCP, you are able to get a referral to see that doctor, but when you go to make the appointment you find out that endocrinologist is only covered under the other medicaid program in your area, not yours. So you would have to switch programs and leave all of the healthcare providers you already see. What do you do?',
     choices: [{
         id: 'fraud',
