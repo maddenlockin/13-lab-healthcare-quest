@@ -10,7 +10,7 @@ form.addEventListener('submit', (e) => {
     const userClass = formData.get('class');
     //console.log(user, userClass);
 
-    const userObject = {
+    let userObject = {
     name: user,
     class: userClass,
     completed: {},

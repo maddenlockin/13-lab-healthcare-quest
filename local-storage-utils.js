@@ -22,6 +22,7 @@ export function changeCash(someCashValue){
     const user = getUser();
     
     user.cash = user.cash + someCashValue
+    console.log(typeof user.cash);
     
     setUser(user);
 };

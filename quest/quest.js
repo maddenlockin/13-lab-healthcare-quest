@@ -29,7 +29,7 @@ for (let choice of quest.choices) {
     input.name = 'choice';
     input.value = choice.id;
 
-    label.append(choice.description, input);
+    label.append(input, choice.description);
     form.append(label);
 };
 

@@ -3,7 +3,7 @@
 body {
     --color1: #fada9f;
     font-family: 'Sora', sans-serif;
-    
+   
     
 }
 
@@ -14,6 +14,12 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 800px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 
 }
 
@@ -26,7 +32,7 @@ p {
 button {
     background-color: var(--color1);
     border-radius: 50%;
-    width:67px;
+    width:70px;
     height: 67px;
     border: 1px solid var(--color1);
     padding: 5px;
@@ -35,26 +41,49 @@ button {
     justify-content: center;
     align-items: center;
     margin: 10px;
-    font-size: 18px;
-
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 
 }
 form {
-
+    margin: auto;
+    width: 90%;
     border: 1px solid #dcdcdc;
     border-radius: 10px;
     padding: 20px;
     display: grid;
     justify-content: center;
+    text-align: left;
     
-    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    justify-content: space-between;
 }
 
 .name {
     margin: 30px;
     width: 200px;
 }
+#begin {
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+}
 
+#quests {
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    color: black;
+}
 /* use the below areas to style the 
 list of quests before (a) and after (span) they have been interacted with
 a {
@@ -65,10 +94,16 @@ span {
 } */
 img {
     height: 200px;
+    padding: 20px;
     
 }
 header {
     background-color: #fada9f;
     display: grid;
     justify-content: right;
+}
+div {
+    max-width: 800px;
+    text-align: center;
+    margin: 10px;
 }
