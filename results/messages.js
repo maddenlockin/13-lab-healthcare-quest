@@ -1,19 +1,19 @@
 export const aliveCashMessages = {
-    none: 'you ran out of cash. You are probably getting evicted. ',
-    sad: 'You have enough for rent or everything else, but not both.',
-    have:'You can pay for rent and food, probably not gas though.',
+    none: 'out of cash. Your take a third job to try and keep your apartment and you get sicker. ',
+    sad: 'with enough cash for rent or food, but not both.',
+    have:'you can pay for rent and food, congrats.',
 };
 
 export const deadCashMessages = {
-    none: '',
-    sad: '',
-    have:'',
+    none: 'totally broke. Maybe your family will not be sent the medical bills from your death?',
+    sad: 'with just enough to pay off one last medical bill.',
+    have:'you can afford to be cremated, congrats. ',
 };
 
 export const healthMessages = {
-    healthy: '',
-    struggling: '',
-    dead:'',
+    healthy: 'in fair health',
+    struggling: 'very sick',
+    dead:'by dying',
 };
 
 function evaluateHealth(user){
@@ -48,5 +48,5 @@ export function getEndingMessage(user) {
         cashMessage = aliveCashMessages[cash];
     }
 
-    return `Hey ${user.name}, ${user.class} you ended your quest for healthcare ${healthMessages[health]} and ${cashMessage}`;
+    return `Hey ${user.name}, ${user.class}, you ended your quest for healthcare ${healthMessages[health]} and ${cashMessage}`;
 };

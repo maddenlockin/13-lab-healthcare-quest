@@ -10,10 +10,10 @@ export function renderStats(){
     const cashP = document.createElement('p');
 
     nameP.textContent = user.name;
-    healthP.textContent = `Health: ${user.health}`;
-    cashP.textContent = `Cash: ${user.cash}`;
+    healthP.textContent = `Health: ${user.health}%`;
+    cashP.textContent = `Cash: $ ${user.cash}`;
     
     div.append(nameP, healthP, cashP);
     header.append(div);
-    console.log('stats', renderStats)
+    //console.log('stats', renderStats)
 }

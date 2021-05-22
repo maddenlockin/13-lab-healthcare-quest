@@ -11,14 +11,14 @@ if (userCompletedAllQuests() || userDied()) {
     window.location = '../results'
 }
 
-const ul = document.querySelector('#quests');
+const nav = document.querySelector('#quests');
 
 
 
 for (let quest of quests) {
     const questIsCompleted = user.completed[quest.id];;
 
-    const li = document.createElement('li');
+    const p = document.createElement('p');
 
     if (!questIsCompleted) {
         const a = document.createElement('a');
@@ -26,7 +26,7 @@ for (let quest of quests) {
         a.href = `../quest/?id=${quest.id}`;
         a.textContent = quest.title;
 
-        li.append(a);
+        p.append(a);
 
     } else {
         const span = document.createElement('span');
@@ -34,7 +34,20 @@ for (let quest of quests) {
         span.style.textDecoration = "line-through";
         span.textContent = quest.title;
 
-        li.append(span);
+        p.append(span);
     }
-    ul.append(li);
+    nav.append(p);
+}
+
+export function createLink(quest) {
+    const link = document.createElement('a');
+
+    link.classList.add('quest');
+
+    link.href = '../quest/?id=' + quest.id;
+    link.style.top = quest.map.top;
+    link.style.left = quest.map.left;
+    link.textContent = quest.title;
+
+    return link;
 }

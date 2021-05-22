@@ -41,7 +41,6 @@ form.append(button);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const formData = new FormData(form);
 
     const choiceId = formData.get('choice')
