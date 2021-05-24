@@ -25,7 +25,8 @@ for (let quest of quests) {
 
         a.href = `../quest/?id=${quest.id}`;
         a.textContent = quest.title;
-
+        a.style.top = quest.map.top;
+        a.style.left = quest.map.left;
         p.append(a);
 
     } else {
@@ -37,17 +38,4 @@ for (let quest of quests) {
         p.append(span);
     }
     nav.append(p);
-}
-
-export function createLink(quest) {
-    const link = document.createElement('a');
-
-    link.classList.add('quest');
-
-    link.href = '../quest/?id=' + quest.id;
-    link.style.top = quest.map.top;
-    link.style.left = quest.map.left;
-    link.textContent = quest.title;
-
-    return link;
 }
