@@ -7,19 +7,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>      title        </title>
+    <title>      Healthcare Quest        </title>
 </head>
 
 <body>
+    <header></header>
     <main>
-        <div class="ape"> hi🦧</div>
-
-
-
-        
+        <form id="user-form">
+            <label>
+                Name
+                <input name="username" class="name"/>
+            </label>
+            <label>
+                <input type="radio" name="class"  value='Self-employed Photographer' />
+                Self-employed Photographer
+            </label>
+            <label>
+                <input type="radio" name="class"  value='Fastfood Worker' />
+                Fastfood Worker
+            </label>
+            <label>
+                <input type="radio" name="class"  value='Substitute Teacher' />
+                Substitute Teacher
+            </label>
+            <button>Continue</button>
+        </form>
     </main>
 </body>
 
-<script type="module" src="./data/app.js"></script>
+<script type="module" src="./app.js"></script>
+<script type="module" src="./render-stats.js"></script>
 
 </html>

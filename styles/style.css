@@ -1,4 +1,7 @@
+
+
 body {
+    --color1: #fada9f;
     font-family: 'Sora', sans-serif;
     
 }
@@ -6,12 +9,105 @@ body {
 main {
     position: relative;
     height: 100vh;
-    display: grid;    
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+}
+
+button {
+    background-color: var(--color1);
+    border-radius: 50%;
+    width:70px;
+    height: 67px;
+    border: 1px solid var(--color1);
+    padding-top: 5px;
+    font-variant: small-caps;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    margin: 10px;
+    width: 90%;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    text-align: left;
+    
 }
 
 
-.ape {
-    font-size: 10em;
+.name {
+    margin: 30px;
+    width: 200px;
+}
+
+#begin {
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    
+}
+
+#quests {
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+a {
+    color: rgb(155, 156, 156);
+
+}
+span {
+    color: pink
+
+}
+p {
+    margin: 1px;
+}
+
+img {
+    height: 200px;
+    padding: 20px;
+    
+}
+header {
+    background-color: #fada9f;
+    display: grid;
+    justify-content: right;
+    text-align: right;
+    height: 80px;
+}
+div {
+    max-width: 800px;
+    /* text-align: center; */
+    margin: 10px;
+}
+.quest {
     position: relative;
-    margin: auto;
+}
+
+#main {
+    background-image: url("../assets/world.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position-y: 50%;
 }
