@@ -27,7 +27,7 @@ function evaluateHealth(user){
 };
 
 function evaluateCash(user){
-    if (user.cash > 500) {
+    if (user.cash > 750) {
         return 'have';
     }
     if (user.cash > 0) {

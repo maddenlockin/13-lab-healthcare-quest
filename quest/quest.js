@@ -63,7 +63,7 @@ form.addEventListener('submit', (e) => {
 
     resultsDiv.append(returnButton);
     main.append(resultsDiv);
-    //setTimeout(() => window.location = '../list', 5000);
+    //setTimeout(() => window.location.href = '../list', 5000);
 })
 
 main.append(h1, img, p, form);

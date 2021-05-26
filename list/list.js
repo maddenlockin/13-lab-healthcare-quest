@@ -8,7 +8,7 @@ renderStats(user);
 
 if (userCompletedAllQuests() || userDied()) {
     //take them to the results page
-    window.location = '../results'
+    window.location.href = '../results'
 }
 
 const nav = document.querySelector('#quests');

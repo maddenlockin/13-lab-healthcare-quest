@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
     };
     setUser(userObject);
 
-    window.location = './list';
+    window.location.href = './list';
 
 });
 
