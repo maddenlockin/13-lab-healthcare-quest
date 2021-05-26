@@ -16,7 +16,9 @@ resultsP.textContent = getEndingMessage(user);
 
 //add play again button that clears out data
 button.addEventListener('click', () => {
-    localStorage.clear;
+    console.log("hello");
+    //debugger;
+    localStorage.clear();
 
-    window.location.replace('./');
+    window.location.replace('../');
 })
