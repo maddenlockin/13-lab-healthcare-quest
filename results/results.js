@@ -20,5 +20,5 @@ button.addEventListener('click', () => {
     //debugger;
     localStorage.clear();
 
-    window.location.replace('../');
+    window.location ='../';
 })
