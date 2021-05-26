@@ -18,5 +18,5 @@ resultsP.textContent = getEndingMessage(user);
 button.addEventListener('click', () => {
     localStorage.clear;
 
-    window.location.href('../');
+    window.location.replace('./');
 })
